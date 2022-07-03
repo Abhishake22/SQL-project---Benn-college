@@ -1,0 +1,10 @@
+1.Write a query that includes a column that is flagged "yes" when a player is from California, and sort the results with those players first.
+
+
+SELECT player_name,state,
+       CASE WHEN state = 'CA' THEN 'YES'
+       ELSE NULL END AS from_california
+FROM benn.college_football_players
+ORDER BY from_california
+
+
